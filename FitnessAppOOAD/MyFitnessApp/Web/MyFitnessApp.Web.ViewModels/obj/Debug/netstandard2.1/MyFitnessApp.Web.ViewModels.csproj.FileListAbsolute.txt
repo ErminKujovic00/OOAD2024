@@ -1,0 +1,40 @@
+C:\Users\ermin\Desktop\Fitness\MyFitnessApp\MyFitnessApp\Web\MyFitnessApp.Web.ViewModels\bin\Debug\netstandard2.1\MyFitnessApp.Web.ViewModels.deps.json
+C:\Users\ermin\Desktop\Fitness\MyFitnessApp\MyFitnessApp\Web\MyFitnessApp.Web.ViewModels\bin\Debug\netstandard2.1\MyFitnessApp.Web.ViewModels.dll
+C:\Users\ermin\Desktop\Fitness\MyFitnessApp\MyFitnessApp\Web\MyFitnessApp.Web.ViewModels\bin\Debug\netstandard2.1\MyFitnessApp.Web.ViewModels.pdb
+C:\Users\ermin\Desktop\Fitness\MyFitnessApp\MyFitnessApp\Web\MyFitnessApp.Web.ViewModels\bin\Debug\netstandard2.1\MyFitnessApp.Common.dll
+C:\Users\ermin\Desktop\Fitness\MyFitnessApp\MyFitnessApp\Web\MyFitnessApp.Web.ViewModels\bin\Debug\netstandard2.1\MyFitnessApp.Data.Common.dll
+C:\Users\ermin\Desktop\Fitness\MyFitnessApp\MyFitnessApp\Web\MyFitnessApp.Web.ViewModels\bin\Debug\netstandard2.1\MyFitnessApp.Data.Models.dll
+C:\Users\ermin\Desktop\Fitness\MyFitnessApp\MyFitnessApp\Web\MyFitnessApp.Web.ViewModels\bin\Debug\netstandard2.1\MyFitnessApp.Services.Mapping.dll
+C:\Users\ermin\Desktop\Fitness\MyFitnessApp\MyFitnessApp\Web\MyFitnessApp.Web.ViewModels\bin\Debug\netstandard2.1\MyFitnessApp.Data.Models.pdb
+C:\Users\ermin\Desktop\Fitness\MyFitnessApp\MyFitnessApp\Web\MyFitnessApp.Web.ViewModels\bin\Debug\netstandard2.1\MyFitnessApp.Services.Mapping.pdb
+C:\Users\ermin\Desktop\Fitness\MyFitnessApp\MyFitnessApp\Web\MyFitnessApp.Web.ViewModels\bin\Debug\netstandard2.1\MyFitnessApp.Common.pdb
+C:\Users\ermin\Desktop\Fitness\MyFitnessApp\MyFitnessApp\Web\MyFitnessApp.Web.ViewModels\bin\Debug\netstandard2.1\MyFitnessApp.Data.Common.pdb
+C:\Users\ermin\Desktop\Fitness\MyFitnessApp\MyFitnessApp\Web\MyFitnessApp.Web.ViewModels\obj\Debug\netstandard2.1\MyFitnessApp.Web.ViewModels.csproj.AssemblyReference.cache
+C:\Users\ermin\Desktop\Fitness\MyFitnessApp\MyFitnessApp\Web\MyFitnessApp.Web.ViewModels\obj\Debug\netstandard2.1\MyFitnessApp.Web.ViewModels.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ermin\Desktop\Fitness\MyFitnessApp\MyFitnessApp\Web\MyFitnessApp.Web.ViewModels\obj\Debug\netstandard2.1\MyFitnessApp.Web.ViewModels.AssemblyInfoInputs.cache
+C:\Users\ermin\Desktop\Fitness\MyFitnessApp\MyFitnessApp\Web\MyFitnessApp.Web.ViewModels\obj\Debug\netstandard2.1\MyFitnessApp.Web.ViewModels.AssemblyInfo.cs
+C:\Users\ermin\Desktop\Fitness\MyFitnessApp\MyFitnessApp\Web\MyFitnessApp.Web.ViewModels\obj\Debug\netstandard2.1\MyFitnessApp.Web.ViewModels.csproj.CoreCompileInputs.cache
+C:\Users\ermin\Desktop\Fitness\MyFitnessApp\MyFitnessApp\Web\MyFitnessApp.Web.ViewModels\obj\Debug\netstandard2.1\MyFitnessApp.Web.ViewModels.sourcelink.json
+C:\Users\ermin\Desktop\Fitness\MyFitnessApp\MyFitnessApp\Web\MyFitnessApp.Web.ViewModels\obj\Debug\netstandard2.1\MyFitnes.A7854B97.Up2Date
+C:\Users\ermin\Desktop\Fitness\MyFitnessApp\MyFitnessApp\Web\MyFitnessApp.Web.ViewModels\obj\Debug\netstandard2.1\MyFitnessApp.Web.ViewModels.dll
+C:\Users\ermin\Desktop\Fitness\MyFitnessApp\MyFitnessApp\Web\MyFitnessApp.Web.ViewModels\obj\Debug\netstandard2.1\MyFitnessApp.Web.ViewModels.pdb
+C:\Users\ermin\Desktop\Faks\Semestar_6\Objektno orijentisana analiza i dizajn\Fitness\MyFitnessApp\MyFitnessApp\Web\MyFitnessApp.Web.ViewModels\bin\Debug\netstandard2.1\MyFitnessApp.Web.ViewModels.deps.json
+C:\Users\ermin\Desktop\Faks\Semestar_6\Objektno orijentisana analiza i dizajn\Fitness\MyFitnessApp\MyFitnessApp\Web\MyFitnessApp.Web.ViewModels\bin\Debug\netstandard2.1\MyFitnessApp.Web.ViewModels.dll
+C:\Users\ermin\Desktop\Faks\Semestar_6\Objektno orijentisana analiza i dizajn\Fitness\MyFitnessApp\MyFitnessApp\Web\MyFitnessApp.Web.ViewModels\bin\Debug\netstandard2.1\MyFitnessApp.Web.ViewModels.pdb
+C:\Users\ermin\Desktop\Faks\Semestar_6\Objektno orijentisana analiza i dizajn\Fitness\MyFitnessApp\MyFitnessApp\Web\MyFitnessApp.Web.ViewModels\bin\Debug\netstandard2.1\MyFitnessApp.Common.dll
+C:\Users\ermin\Desktop\Faks\Semestar_6\Objektno orijentisana analiza i dizajn\Fitness\MyFitnessApp\MyFitnessApp\Web\MyFitnessApp.Web.ViewModels\bin\Debug\netstandard2.1\MyFitnessApp.Data.Common.dll
+C:\Users\ermin\Desktop\Faks\Semestar_6\Objektno orijentisana analiza i dizajn\Fitness\MyFitnessApp\MyFitnessApp\Web\MyFitnessApp.Web.ViewModels\bin\Debug\netstandard2.1\MyFitnessApp.Data.Models.dll
+C:\Users\ermin\Desktop\Faks\Semestar_6\Objektno orijentisana analiza i dizajn\Fitness\MyFitnessApp\MyFitnessApp\Web\MyFitnessApp.Web.ViewModels\bin\Debug\netstandard2.1\MyFitnessApp.Services.Mapping.dll
+C:\Users\ermin\Desktop\Faks\Semestar_6\Objektno orijentisana analiza i dizajn\Fitness\MyFitnessApp\MyFitnessApp\Web\MyFitnessApp.Web.ViewModels\bin\Debug\netstandard2.1\MyFitnessApp.Data.Models.pdb
+C:\Users\ermin\Desktop\Faks\Semestar_6\Objektno orijentisana analiza i dizajn\Fitness\MyFitnessApp\MyFitnessApp\Web\MyFitnessApp.Web.ViewModels\bin\Debug\netstandard2.1\MyFitnessApp.Services.Mapping.pdb
+C:\Users\ermin\Desktop\Faks\Semestar_6\Objektno orijentisana analiza i dizajn\Fitness\MyFitnessApp\MyFitnessApp\Web\MyFitnessApp.Web.ViewModels\bin\Debug\netstandard2.1\MyFitnessApp.Common.pdb
+C:\Users\ermin\Desktop\Faks\Semestar_6\Objektno orijentisana analiza i dizajn\Fitness\MyFitnessApp\MyFitnessApp\Web\MyFitnessApp.Web.ViewModels\bin\Debug\netstandard2.1\MyFitnessApp.Data.Common.pdb
+C:\Users\ermin\Desktop\Faks\Semestar_6\Objektno orijentisana analiza i dizajn\Fitness\MyFitnessApp\MyFitnessApp\Web\MyFitnessApp.Web.ViewModels\obj\Debug\netstandard2.1\MyFitnessApp.Web.ViewModels.csproj.AssemblyReference.cache
+C:\Users\ermin\Desktop\Faks\Semestar_6\Objektno orijentisana analiza i dizajn\Fitness\MyFitnessApp\MyFitnessApp\Web\MyFitnessApp.Web.ViewModels\obj\Debug\netstandard2.1\MyFitnessApp.Web.ViewModels.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ermin\Desktop\Faks\Semestar_6\Objektno orijentisana analiza i dizajn\Fitness\MyFitnessApp\MyFitnessApp\Web\MyFitnessApp.Web.ViewModels\obj\Debug\netstandard2.1\MyFitnessApp.Web.ViewModels.AssemblyInfoInputs.cache
+C:\Users\ermin\Desktop\Faks\Semestar_6\Objektno orijentisana analiza i dizajn\Fitness\MyFitnessApp\MyFitnessApp\Web\MyFitnessApp.Web.ViewModels\obj\Debug\netstandard2.1\MyFitnessApp.Web.ViewModels.AssemblyInfo.cs
+C:\Users\ermin\Desktop\Faks\Semestar_6\Objektno orijentisana analiza i dizajn\Fitness\MyFitnessApp\MyFitnessApp\Web\MyFitnessApp.Web.ViewModels\obj\Debug\netstandard2.1\MyFitnessApp.Web.ViewModels.csproj.CoreCompileInputs.cache
+C:\Users\ermin\Desktop\Faks\Semestar_6\Objektno orijentisana analiza i dizajn\Fitness\MyFitnessApp\MyFitnessApp\Web\MyFitnessApp.Web.ViewModels\obj\Debug\netstandard2.1\MyFitnessApp.Web.ViewModels.sourcelink.json
+C:\Users\ermin\Desktop\Faks\Semestar_6\Objektno orijentisana analiza i dizajn\Fitness\MyFitnessApp\MyFitnessApp\Web\MyFitnessApp.Web.ViewModels\obj\Debug\netstandard2.1\MyFitnes.A7854B97.Up2Date
+C:\Users\ermin\Desktop\Faks\Semestar_6\Objektno orijentisana analiza i dizajn\Fitness\MyFitnessApp\MyFitnessApp\Web\MyFitnessApp.Web.ViewModels\obj\Debug\netstandard2.1\MyFitnessApp.Web.ViewModels.dll
+C:\Users\ermin\Desktop\Faks\Semestar_6\Objektno orijentisana analiza i dizajn\Fitness\MyFitnessApp\MyFitnessApp\Web\MyFitnessApp.Web.ViewModels\obj\Debug\netstandard2.1\MyFitnessApp.Web.ViewModels.pdb

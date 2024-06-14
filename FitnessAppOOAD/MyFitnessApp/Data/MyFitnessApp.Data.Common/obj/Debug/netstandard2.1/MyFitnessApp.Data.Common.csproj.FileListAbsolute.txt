@@ -1,0 +1,22 @@
+C:\Users\ermin\Desktop\Fitness\MyFitnessApp\MyFitnessApp\Data\MyFitnessApp.Data.Common\bin\Debug\netstandard2.1\MyFitnessApp.Data.Common.deps.json
+C:\Users\ermin\Desktop\Fitness\MyFitnessApp\MyFitnessApp\Data\MyFitnessApp.Data.Common\bin\Debug\netstandard2.1\MyFitnessApp.Data.Common.dll
+C:\Users\ermin\Desktop\Fitness\MyFitnessApp\MyFitnessApp\Data\MyFitnessApp.Data.Common\bin\Debug\netstandard2.1\MyFitnessApp.Data.Common.pdb
+C:\Users\ermin\Desktop\Fitness\MyFitnessApp\MyFitnessApp\Data\MyFitnessApp.Data.Common\obj\Debug\netstandard2.1\MyFitnessApp.Data.Common.csproj.AssemblyReference.cache
+C:\Users\ermin\Desktop\Fitness\MyFitnessApp\MyFitnessApp\Data\MyFitnessApp.Data.Common\obj\Debug\netstandard2.1\MyFitnessApp.Data.Common.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ermin\Desktop\Fitness\MyFitnessApp\MyFitnessApp\Data\MyFitnessApp.Data.Common\obj\Debug\netstandard2.1\MyFitnessApp.Data.Common.AssemblyInfoInputs.cache
+C:\Users\ermin\Desktop\Fitness\MyFitnessApp\MyFitnessApp\Data\MyFitnessApp.Data.Common\obj\Debug\netstandard2.1\MyFitnessApp.Data.Common.AssemblyInfo.cs
+C:\Users\ermin\Desktop\Fitness\MyFitnessApp\MyFitnessApp\Data\MyFitnessApp.Data.Common\obj\Debug\netstandard2.1\MyFitnessApp.Data.Common.csproj.CoreCompileInputs.cache
+C:\Users\ermin\Desktop\Fitness\MyFitnessApp\MyFitnessApp\Data\MyFitnessApp.Data.Common\obj\Debug\netstandard2.1\MyFitnessApp.Data.Common.sourcelink.json
+C:\Users\ermin\Desktop\Fitness\MyFitnessApp\MyFitnessApp\Data\MyFitnessApp.Data.Common\obj\Debug\netstandard2.1\MyFitnessApp.Data.Common.dll
+C:\Users\ermin\Desktop\Fitness\MyFitnessApp\MyFitnessApp\Data\MyFitnessApp.Data.Common\obj\Debug\netstandard2.1\MyFitnessApp.Data.Common.pdb
+C:\Users\ermin\Desktop\Faks\Semestar_6\Objektno orijentisana analiza i dizajn\Fitness\MyFitnessApp\MyFitnessApp\Data\MyFitnessApp.Data.Common\bin\Debug\netstandard2.1\MyFitnessApp.Data.Common.deps.json
+C:\Users\ermin\Desktop\Faks\Semestar_6\Objektno orijentisana analiza i dizajn\Fitness\MyFitnessApp\MyFitnessApp\Data\MyFitnessApp.Data.Common\bin\Debug\netstandard2.1\MyFitnessApp.Data.Common.dll
+C:\Users\ermin\Desktop\Faks\Semestar_6\Objektno orijentisana analiza i dizajn\Fitness\MyFitnessApp\MyFitnessApp\Data\MyFitnessApp.Data.Common\bin\Debug\netstandard2.1\MyFitnessApp.Data.Common.pdb
+C:\Users\ermin\Desktop\Faks\Semestar_6\Objektno orijentisana analiza i dizajn\Fitness\MyFitnessApp\MyFitnessApp\Data\MyFitnessApp.Data.Common\obj\Debug\netstandard2.1\MyFitnessApp.Data.Common.csproj.AssemblyReference.cache
+C:\Users\ermin\Desktop\Faks\Semestar_6\Objektno orijentisana analiza i dizajn\Fitness\MyFitnessApp\MyFitnessApp\Data\MyFitnessApp.Data.Common\obj\Debug\netstandard2.1\MyFitnessApp.Data.Common.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ermin\Desktop\Faks\Semestar_6\Objektno orijentisana analiza i dizajn\Fitness\MyFitnessApp\MyFitnessApp\Data\MyFitnessApp.Data.Common\obj\Debug\netstandard2.1\MyFitnessApp.Data.Common.AssemblyInfoInputs.cache
+C:\Users\ermin\Desktop\Faks\Semestar_6\Objektno orijentisana analiza i dizajn\Fitness\MyFitnessApp\MyFitnessApp\Data\MyFitnessApp.Data.Common\obj\Debug\netstandard2.1\MyFitnessApp.Data.Common.AssemblyInfo.cs
+C:\Users\ermin\Desktop\Faks\Semestar_6\Objektno orijentisana analiza i dizajn\Fitness\MyFitnessApp\MyFitnessApp\Data\MyFitnessApp.Data.Common\obj\Debug\netstandard2.1\MyFitnessApp.Data.Common.csproj.CoreCompileInputs.cache
+C:\Users\ermin\Desktop\Faks\Semestar_6\Objektno orijentisana analiza i dizajn\Fitness\MyFitnessApp\MyFitnessApp\Data\MyFitnessApp.Data.Common\obj\Debug\netstandard2.1\MyFitnessApp.Data.Common.sourcelink.json
+C:\Users\ermin\Desktop\Faks\Semestar_6\Objektno orijentisana analiza i dizajn\Fitness\MyFitnessApp\MyFitnessApp\Data\MyFitnessApp.Data.Common\obj\Debug\netstandard2.1\MyFitnessApp.Data.Common.dll
+C:\Users\ermin\Desktop\Faks\Semestar_6\Objektno orijentisana analiza i dizajn\Fitness\MyFitnessApp\MyFitnessApp\Data\MyFitnessApp.Data.Common\obj\Debug\netstandard2.1\MyFitnessApp.Data.Common.pdb

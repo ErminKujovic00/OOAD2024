@@ -1,0 +1,50 @@
+﻿@model MyFitnessApp.Web.ViewModels.Search.AllFoodsViewModel
+
+@{
+    this.ViewData["Title"] = "Found foods";
+}
+
+<!-- Breadcrumb -->
+<nav aria-label="breadcrumb" class="main-breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="/">Home</a></li>
+        <li class="breadcrumb-item"><a href="/Foods/All">All foods</a></li>
+        <li class="breadcrumb-item active" aria-current="page"><strong>@this.ViewData["Title"]</strong></li>
+    </ol>
+</nav>
+<!-- /Breadcrumb -->
+
+<div class="col-md-8 offset-2">
+    <ol class="list-group list-group-numbered">
+        @foreach (var food in Model.Foods.OrderBy(x => x.Name))
+        {
+            <li class="list-group-item d-flex justify-content-between align-items-start">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-4 align-self-center">
+                            <div>
+                                <h6><strong>@food.Name</strong></h6>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div><strong>Protein:</strong> @food.ProteinIn100Grams gr.</div>
+                            <div><strong>Carbohydrates:</strong> @food.CarbohydratesIn100Grams gr.</div>
+                            <div><strong>Fats:</strong> @food.FatIn100Grams gr.</div>
+                            <div><strong>Total calories:</strong> @food.TotalCalories</div>
+                        </div>
+
+                        <div class="col-md-4 align-self-center text-center">
+                            <a asp-controller="Foods" asp-action="Add" asp-route-id="@food.Name" class="btn btn-outline-secondary m-4">Select food</a>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        }
+    </ol>
+</div>
+
+<hr />
+
+<div class="text-center">
+    <a asp-controller="Search" asp-action="SearchFood" class="btn btn-outline-secondary m-2">Search again</a>
+</div>

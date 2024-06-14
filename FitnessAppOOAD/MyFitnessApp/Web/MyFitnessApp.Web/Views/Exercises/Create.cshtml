@@ -1,0 +1,80 @@
+﻿@using MyFitnessApp.Data.Models
+@model CreateExerciseInputModel
+
+@{
+    ViewData["Title"] = "Create new exercise";
+}
+
+<!-- Breadcrumb -->
+<nav aria-label="breadcrumb" class="main-breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="/">Home</a></li>
+        <li class="breadcrumb-item"><a href="/Exercises/All">All exercises</a></li>
+        <li class="breadcrumb-item active" aria-current="page"><strong>@ViewData["Title"]</strong></li>
+    </ol>
+</nav>
+<!-- /Breadcrumb -->
+
+<div class="container">
+    <div class="row">
+        <div class="offset-lg-2 col-lg-8 col-sm-12 offset-xl-3 col-xl-6">
+            <form method="post">
+                <div class="form-group">
+                    <label asp-for="Name"></label>
+                    <input asp-for="Name" class="form-control" placeholder="exercise name here...">
+                    <span asp-validation-for="Name" class="small text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="Description"></label>
+                    <textarea asp-for="Description" class="form-control" rows="4" placeholder="description here..."></textarea>
+                    <span asp-validation-for="Description" class="small text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="CategoryId"></label>
+                    <select asp-for="CategoryId" class="form-control">
+                        @foreach (var category in Model.Categories)
+                        {
+                            <option value="@category.Id">@category.Name</option>
+                        }
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label asp-for="EquipmentId"></label>
+                    <select asp-for="EquipmentId" class="form-control">
+                        @foreach (var equipment in Model.Equipments)
+                        {
+                            <option value="@equipment.Id">@equipment.Name</option>
+                        }
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="Difficulty"></label>
+                    <select asp-for="Difficulty" class="form-control">
+                        @foreach (int difficulty in Enum.GetValues(typeof(ExerciseDifficulty)))
+                        {
+                            <option value="@difficulty">@Enum.GetName(typeof(ExerciseDifficulty), difficulty)</option>
+                        }
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="ImageUrl"></label>
+                    <input asp-for="ImageUrl" class="form-control" placeholder="image url here....">
+                    <span asp-validation-for="ImageUrl" class="small text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="VideoUrl"></label>
+                    <input asp-for="VideoUrl" class="form-control" placeholder="YouTube video url here....">
+                    <span asp-validation-for="VideoUrl" class="small text-danger"></span>
+                </div>
+                <div class="text-center pt-2">
+                    <input class="btn btn-outline-secondary" type="submit" value="Save" />
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

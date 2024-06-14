@@ -1,0 +1,22 @@
+C:\Users\ermin\Desktop\Fitness\MyFitnessApp\MyFitnessApp\Services\MyFitnessApp.Services.Messaging\bin\Debug\netstandard2.1\MyFitnessApp.Services.Messaging.deps.json
+C:\Users\ermin\Desktop\Fitness\MyFitnessApp\MyFitnessApp\Services\MyFitnessApp.Services.Messaging\bin\Debug\netstandard2.1\MyFitnessApp.Services.Messaging.dll
+C:\Users\ermin\Desktop\Fitness\MyFitnessApp\MyFitnessApp\Services\MyFitnessApp.Services.Messaging\bin\Debug\netstandard2.1\MyFitnessApp.Services.Messaging.pdb
+C:\Users\ermin\Desktop\Fitness\MyFitnessApp\MyFitnessApp\Services\MyFitnessApp.Services.Messaging\obj\Debug\netstandard2.1\MyFitnessApp.Services.Messaging.csproj.AssemblyReference.cache
+C:\Users\ermin\Desktop\Fitness\MyFitnessApp\MyFitnessApp\Services\MyFitnessApp.Services.Messaging\obj\Debug\netstandard2.1\MyFitnessApp.Services.Messaging.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ermin\Desktop\Fitness\MyFitnessApp\MyFitnessApp\Services\MyFitnessApp.Services.Messaging\obj\Debug\netstandard2.1\MyFitnessApp.Services.Messaging.AssemblyInfoInputs.cache
+C:\Users\ermin\Desktop\Fitness\MyFitnessApp\MyFitnessApp\Services\MyFitnessApp.Services.Messaging\obj\Debug\netstandard2.1\MyFitnessApp.Services.Messaging.AssemblyInfo.cs
+C:\Users\ermin\Desktop\Fitness\MyFitnessApp\MyFitnessApp\Services\MyFitnessApp.Services.Messaging\obj\Debug\netstandard2.1\MyFitnessApp.Services.Messaging.csproj.CoreCompileInputs.cache
+C:\Users\ermin\Desktop\Fitness\MyFitnessApp\MyFitnessApp\Services\MyFitnessApp.Services.Messaging\obj\Debug\netstandard2.1\MyFitnessApp.Services.Messaging.sourcelink.json
+C:\Users\ermin\Desktop\Fitness\MyFitnessApp\MyFitnessApp\Services\MyFitnessApp.Services.Messaging\obj\Debug\netstandard2.1\MyFitnessApp.Services.Messaging.dll
+C:\Users\ermin\Desktop\Fitness\MyFitnessApp\MyFitnessApp\Services\MyFitnessApp.Services.Messaging\obj\Debug\netstandard2.1\MyFitnessApp.Services.Messaging.pdb
+C:\Users\ermin\Desktop\Faks\Semestar_6\Objektno orijentisana analiza i dizajn\Fitness\MyFitnessApp\MyFitnessApp\Services\MyFitnessApp.Services.Messaging\bin\Debug\netstandard2.1\MyFitnessApp.Services.Messaging.deps.json
+C:\Users\ermin\Desktop\Faks\Semestar_6\Objektno orijentisana analiza i dizajn\Fitness\MyFitnessApp\MyFitnessApp\Services\MyFitnessApp.Services.Messaging\bin\Debug\netstandard2.1\MyFitnessApp.Services.Messaging.dll
+C:\Users\ermin\Desktop\Faks\Semestar_6\Objektno orijentisana analiza i dizajn\Fitness\MyFitnessApp\MyFitnessApp\Services\MyFitnessApp.Services.Messaging\bin\Debug\netstandard2.1\MyFitnessApp.Services.Messaging.pdb
+C:\Users\ermin\Desktop\Faks\Semestar_6\Objektno orijentisana analiza i dizajn\Fitness\MyFitnessApp\MyFitnessApp\Services\MyFitnessApp.Services.Messaging\obj\Debug\netstandard2.1\MyFitnessApp.Services.Messaging.csproj.AssemblyReference.cache
+C:\Users\ermin\Desktop\Faks\Semestar_6\Objektno orijentisana analiza i dizajn\Fitness\MyFitnessApp\MyFitnessApp\Services\MyFitnessApp.Services.Messaging\obj\Debug\netstandard2.1\MyFitnessApp.Services.Messaging.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ermin\Desktop\Faks\Semestar_6\Objektno orijentisana analiza i dizajn\Fitness\MyFitnessApp\MyFitnessApp\Services\MyFitnessApp.Services.Messaging\obj\Debug\netstandard2.1\MyFitnessApp.Services.Messaging.AssemblyInfoInputs.cache
+C:\Users\ermin\Desktop\Faks\Semestar_6\Objektno orijentisana analiza i dizajn\Fitness\MyFitnessApp\MyFitnessApp\Services\MyFitnessApp.Services.Messaging\obj\Debug\netstandard2.1\MyFitnessApp.Services.Messaging.AssemblyInfo.cs
+C:\Users\ermin\Desktop\Faks\Semestar_6\Objektno orijentisana analiza i dizajn\Fitness\MyFitnessApp\MyFitnessApp\Services\MyFitnessApp.Services.Messaging\obj\Debug\netstandard2.1\MyFitnessApp.Services.Messaging.csproj.CoreCompileInputs.cache
+C:\Users\ermin\Desktop\Faks\Semestar_6\Objektno orijentisana analiza i dizajn\Fitness\MyFitnessApp\MyFitnessApp\Services\MyFitnessApp.Services.Messaging\obj\Debug\netstandard2.1\MyFitnessApp.Services.Messaging.sourcelink.json
+C:\Users\ermin\Desktop\Faks\Semestar_6\Objektno orijentisana analiza i dizajn\Fitness\MyFitnessApp\MyFitnessApp\Services\MyFitnessApp.Services.Messaging\obj\Debug\netstandard2.1\MyFitnessApp.Services.Messaging.dll
+C:\Users\ermin\Desktop\Faks\Semestar_6\Objektno orijentisana analiza i dizajn\Fitness\MyFitnessApp\MyFitnessApp\Services\MyFitnessApp.Services.Messaging\obj\Debug\netstandard2.1\MyFitnessApp.Services.Messaging.pdb

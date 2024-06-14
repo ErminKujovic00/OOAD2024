@@ -1,0 +1,52 @@
+﻿@model MyFitnessApp.Web.ViewModels.Search.AllExercisesViewModel
+
+@{
+    this.ViewData["Title"] = "Found exercises";
+}
+
+
+<!-- Breadcrumb -->
+<nav aria-label="breadcrumb" class="main-breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="/">Home</a></li>
+        <li class="breadcrumb-item"><a href="/Exercises/All">All exercises</a></li>
+        <li class="breadcrumb-item active" aria-current="page"><strong>@this.ViewData["Title"]</strong></li>
+    </ol>
+</nav>
+<!-- /Breadcrumb -->
+
+
+<div class="row">
+    @foreach (var exercise in this.Model.Exercises.OrderBy(x => x.Name))
+    {
+        <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 col-12 p-1">
+            <a asp-controller="Exercises" asp-action="Add" asp-route-id="@exercise.Id">
+                <div class="card border-dark">
+                    <div class="card card-body text-center alert-secondary">
+                        <div class="text">
+                            <h6><strong> @exercise.Name</strong></h6>
+                        </div>
+                        <div class="media flex-wrap w-100 align-items-center mt-2">
+                            <img src="@exercise.ImageUrl" width="220" class="card-img-top">
+                        </div>
+                        <div class="text-muted mt-2">
+                            Category: @exercise.CategoryName
+                        </div>
+                        <div class="text-muted">
+                            Difficulty: @exercise.DifficultyName
+                        </div>
+                        <div class="text-muted">
+                            Equipment: @exercise.EquipmentName
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+    }
+</div>
+
+<hr />
+
+<div class="text-center">
+    <a asp-controller="Search" asp-action="SearchExercise" class="btn btn-outline-secondary m-2">Search again</a>
+</div>

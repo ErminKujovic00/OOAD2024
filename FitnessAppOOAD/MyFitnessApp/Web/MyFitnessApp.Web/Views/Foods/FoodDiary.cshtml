@@ -1,0 +1,198 @@
+﻿@model FoodDiaryViewModel
+
+@using MyFitnessApp.Services.Data.Profile
+@inject IProfilesService profilesService;
+
+@{
+    ViewData["Title"] = "My food diary";
+    var userId = User.GetId();
+    var profileViewModel = this.profilesService.GetProfileData(userId);
+    double usersCaloriesCoal = 0;
+    if (profileViewModel != null)
+    {
+        usersCaloriesCoal = profileViewModel.DailyCaloriesIntakeGoal;
+    }
+    double calories = 0;
+}
+
+<!-- Breadcrumb -->
+<nav aria-label="breadcrumb" class="main-breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="/">Home</a></li>
+        <li class="breadcrumb-item"><a href="/Foods/All">All foods</a></li>
+        <li class="breadcrumb-item active" aria-current="page"><strong>@ViewData["Title"]</strong></li>
+    </ol>
+</nav>
+<!-- /Breadcrumb -->
+
+@if (this.TempData.ContainsKey("Message"))
+{
+    <div class="alert alert-primary alert-dismissible fade show" role="alert">
+        <strong>@this.TempData["Message"]</strong>
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+}
+
+<div class="container-fluid">
+
+    <h4 class="text-center">Breakfast</h4>
+    <table class="table table-bordered table-sm">
+        <thead>
+            <tr class="col">
+                <th class="col-md-3 text-center">Name</th>
+                <th class="col-md-2 text-center">Serving Size (gram)</th>
+                <th class="col-md-2 text-center">Protein (gram)</th>
+                <th class="col-md-2 text-center">Carbs (gram)</th>
+                <th class="col-md-2 text-center">Fat (gram)</th>
+                <th class="col-md-1 text-center">Calories</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.Breakfast)
+            {
+                calories += item.TotalCalories;
+                <tr class="col">
+                    <td class="col-md-3 text-center">@item.Name</td>
+                    <td class="col-md-2 text-center">@item.ServingSize</td>
+                    <td class="col-md-2 text-center">@item.ProteinIn100Grams.ToString("f2")</td>
+                    <td class="col-md-2 text-center">@item.CarbohydratesIn100Grams.ToString("f2")</td>
+                    <td class="col-md-2 text-center">@item.FatIn100Grams.ToString("f2")</td>
+                    <td class="col-md-1 text-center">@item.TotalCalories.ToString("f2")</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    <h4 class="text-center">Lunch</h4>
+    <table class="table table-bordered table-sm">
+        <thead>
+            <tr class="col">
+                <th class="col-md-3 text-center">Name</th>
+                <th class="col-md-2 text-center">Serving Size (gram)</th>
+                <th class="col-md-2 text-center">Protein (gram)</th>
+                <th class="col-md-2 text-center">Carbs (gram)</th>
+                <th class="col-md-2 text-center">Fat (gram)</th>
+                <th class="col-md-1 text-center">Calories</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.Lunch)
+            {
+                calories += item.TotalCalories;
+                <tr class="col">
+                    <td class="col-md-3 text-center">@item.Name</td>
+                    <td class="col-md-2 text-center">@item.ServingSize</td>
+                    <td class="col-md-2 text-center">@item.ProteinIn100Grams.ToString("f2")</td>
+                    <td class="col-md-2 text-center">@item.CarbohydratesIn100Grams.ToString("f2")</td>
+                    <td class="col-md-2 text-center">@item.FatIn100Grams.ToString("f2")</td>
+                    <td class="col-md-1 text-center">@item.TotalCalories.ToString("f2")</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    <h4 class="text-center">Snack</h4>
+    <table class="table table-bordered table-sm">
+        <thead>
+            <tr class="col">
+                <th class="col-md-3 text-center">Name</th>
+                <th class="col-md-2 text-center">Serving Size (gram)</th>
+                <th class="col-md-2 text-center">Protein (gram)</th>
+                <th class="col-md-2 text-center">Carbs (gram)</th>
+                <th class="col-md-2 text-center">Fat (gram)</th>
+                <th class="col-md-1 text-center">Calories</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.Snack)
+            {
+                calories += item.TotalCalories;
+                <tr class="col">
+                    <td class="col-md-3 text-center">@item.Name</td>
+                    <td class="col-md-2 text-center">@item.ServingSize.ToString("f2")</td>
+                    <td class="col-md-2 text-center">@item.ProteinIn100Grams.ToString("f2")</td>
+                    <td class="col-md-2 text-center">@item.CarbohydratesIn100Grams.ToString("f2")</td>
+                    <td class="col-md-2 text-center">@item.FatIn100Grams.ToString("f2")</td>
+                    <td class="col-md-1 text-center">@item.TotalCalories.ToString("f2")</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    <h4 class="text-center">Dinner</h4>
+    <table class="table table-bordered table-sm">
+        <thead>
+            <tr class="col">
+                <th class="col-md-3 text-center">Name</th>
+                <th class="col-md-2 text-center">Serving Size (gram)</th>
+                <th class="col-md-2 text-center">Protein (gram)</th>
+                <th class="col-md-2 text-center">Carbs (gram)</th>
+                <th class="col-md-2 text-center">Fat (gram)</th>
+                <th class="col-md-1 text-center">Calories</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.Dinner)
+            {
+                calories += item.TotalCalories;
+                <tr class="col">
+                    <td class="col-md-3 text-center">@item.Name</td>
+                    <td class="col-md-2 text-center">@item.ServingSize</td>
+                    <td class="col-md-2 text-center">@item.ProteinIn100Grams.ToString("f2")</td>
+                    <td class="col-md-2 text-center">@item.CarbohydratesIn100Grams.ToString("f2")</td>
+                    <td class="col-md-2 text-center">@item.FatIn100Grams.ToString("f2")</td>
+                    <td class="col-md-1 text-center">@item.TotalCalories.ToString("f2")</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    <h5 class="text-md-right">Total calories: <strong>@calories.ToString("f2")</strong></h5>
+    <h5 class="text-md-right">Calories goal: <strong>@usersCaloriesCoal.ToString("f2")</strong></h5>
+    @{
+        double caloriesDifference = calories - usersCaloriesCoal;
+    }
+
+    @if (caloriesDifference > 0)
+    {
+        <h5 class="text-md-right">You are <strong>@caloriesDifference.ToString("f2")</strong> calories over your daily goal.</h5>
+    }
+    @if (caloriesDifference < 0)
+    {
+        <h5 class="text-md-right">You are <strong>@((-caloriesDifference).ToString("f2"))</strong> calories behind your daily goal.</h5>
+    }
+    @if (caloriesDifference == 0)
+    {
+        <h5 class="text-md-right">You reached your calories goal.</h5>
+    }
+
+
+
+    <div class="text-center pt-2">
+        <a asp-controller="Foods" asp-action="All" class="btn btn-outline-primary">Add food</a>
+    </div>
+    <div class="text-center pt-2">
+        <a asp-controller="Search" asp-action="SearchFood" class="btn btn-outline-info">Search for a food</a>
+    </div>
+
+
+    @if (userId == @Model.UserId || User.IsInRole("Administrator"))
+    {
+        <div class="text-center pt-2">
+            <form method="post" asp-controller="Foods" asp-action="Delete" id="deleteForm"></form>
+            <button class="btn btn-outline-danger" data-toggle="modal" data-target="#deleteModal">Delete diary</button>
+        </div>
+    }
+</div>
+
+<div class="modal" tabindex="-1" role="dialog" id="deleteModal">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-body">
+                <p>Are you sure you want to delete your food diary?</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" onclick="deleteForm.submit()">Yes</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">No</button>
+            </div>
+        </div>
+    </div>
+</div>

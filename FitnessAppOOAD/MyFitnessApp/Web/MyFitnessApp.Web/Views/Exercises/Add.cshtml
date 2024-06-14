@@ -1,0 +1,57 @@
+﻿@model AddExerciseInputModel
+
+@{
+   this.ViewData["Title"] = Model.Name;
+}
+
+<!-- Breadcrumb -->
+<nav aria-label="breadcrumb" class="main-breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="/">Home</a></li>
+        <li class="breadcrumb-item"><a href="/Exercises/All">All exercises</a></li>
+        <li class="breadcrumb-item"><a href="/ExerciseCategories/@Model.CategoryName">@Model.CategoryName</a></li>
+        <li class="breadcrumb-item active" aria-current="page"><strong>@this.ViewData["Title"]</strong></li>
+    </ol>
+</nav>
+<!-- /Breadcrumb -->
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-3 col-xl-3">
+            <partial name="_AddPartial" model="@Model" />
+        </div>
+
+        <div class="col-lg-9 col-xl-9 mt-3">
+            <div class="row">
+                <div class="col-md-6">
+                    <p class="img" ">
+                        <img src="@Model.ImageUrl" class="img-fluid" alt="Responsive image" />
+                    </p>
+                </div>
+                <div class="col-md-6">
+                    <p class="item-description">
+                        <strong>Muscle group: </strong>@Model.CategoryName
+                    </p>
+                    <p class="item-description">
+                        <strong>Equipment: </strong>@Model.EquipmentName
+                    </p>
+                    <p class="item-description">
+                        <strong>Difficulty: </strong>@Model.DifficultyName
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe class="embed-responsive-item" src="@Model.VideoUrl" allowfullscreen></iframe>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <p class="item-description">
+                        <strong>Instructions: </strong>@Model.Description
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

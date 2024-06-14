@@ -1,0 +1,49 @@
+﻿@model MyFitnessApp.Web.ViewModels.Search.AllArticlesViewModel
+
+@{
+    this.ViewData["Title"] = "Found articles";
+}
+
+<!-- Breadcrumb -->
+<nav aria-label="breadcrumb" class="main-breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="/">Home</a></li>
+        <li class="breadcrumb-item"><a href="/Articles/All">All articles</a></li>
+        <li class="breadcrumb-item active" aria-current="page"><strong>@this.ViewData["Title"]</strong></li>
+    </ol>
+</nav>
+<!-- /Breadcrumb -->
+
+
+<div>
+    <div class="row">
+        @foreach (var article in Model.Articles.OrderBy(x => x.Title))
+        {
+            <div class="text-center col-lg-4 col-xl-4 col-md-4 col-sm-12 col-12 mt-3" style="width: 18rem;">
+                <div class='card border-dark'>
+                    <div class="card-header col-md border text-center">
+                        <a asp-controller="Articles" asp-action="Article" asp-route-id="@article.Id">
+                            <img src="@article.ImagePath" class="card-img-top">
+                        </a>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title"> <a asp-controller="Articles" asp-action="Article" asp-route-id="@article.Id">@article.Title</a></h5>
+                        <p class="card-text text-justify">@article.ShortContent</p>
+                    </div>
+                    <div class="card-footer">
+                        Article category:
+                        <a asp-controller="Blogs" asp-action="@article.CategoryName">
+                            <p class="card-text"> @article.CategoryName</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>
+
+<hr />
+
+<div class="text-center">
+    <a asp-controller="Search" asp-action="SearchArticle" class="btn btn-outline-secondary m-2">Search again</a>
+</div>

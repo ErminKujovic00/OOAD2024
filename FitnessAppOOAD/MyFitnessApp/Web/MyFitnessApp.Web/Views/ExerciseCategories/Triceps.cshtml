@@ -1,0 +1,20 @@
+﻿@model AllExercisesViewModel
+
+@{
+    this.ViewData["Title"] = "Triceps";
+}
+
+<!-- Breadcrumb -->
+<nav aria-label="breadcrumb" class="main-breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="/">Home</a></li>
+        <li class="breadcrumb-item"><a href="/Exercises/All">All exerises</a></li>
+        <li class="breadcrumb-item"><a href="/Exercises/Categories">Exercise by muscle group</a></li>
+        <li class="breadcrumb-item active" aria-current="page"><strong>@this.ViewData["Title"]</strong></li>
+    </ol>
+</nav>
+<!-- /Breadcrumb -->
+
+<div>
+    <partial name="_SingleCategoryPartial" model="@Model" />
+</div>

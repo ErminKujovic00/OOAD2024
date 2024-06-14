@@ -1,0 +1,57 @@
+﻿@model AllFoodsViewModel
+
+@{
+    this.ViewData["Title"] = "All Foods";
+}
+
+<!-- Breadcrumb -->
+<nav aria-label="breadcrumb" class="main-breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="/">Home</a></li>
+        <li class="breadcrumb-item active" aria-current="page"><strong>@this.ViewData["Title"]</strong></li>
+    </ol>
+</nav>
+<!-- /Breadcrumb -->
+
+@if (this.TempData.ContainsKey("Message"))
+{
+    <div class="alert alert-primary alert-dismissible fade show" role="alert">
+        <strong>@this.TempData["Message"]</strong>
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+}
+
+<div class="col-xl-10 col-md-10 col-sm-10 col-10 offset-1">
+    <ol class="list-group">
+        @foreach (var food in Model.Foods.OrderByDescending(x => x.CreatedOn))
+        {
+            <li class="list-group-item d-flex justify-content-between align-items-start">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-4 align-self-center">
+                            <div>
+                            <h6><strong>@food.Name</strong></h6>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div><strong>Protein:</strong> @food.ProteinIn100Grams gr.</div>
+                            <div><strong>Carbohydrates:</strong> @food.CarbohydratesIn100Grams gr.</div>
+                            <div><strong>Fats:</strong> @food.FatIn100Grams gr.</div>
+                            <div><strong>Total calories:</strong> @food.TotalCalories</div>
+                        </div>
+
+                        <div class="col-md-4 align-self-center text-center">
+                            <a asp-controller="Foods" asp-action="Add" asp-route-id="@food.Name" class="btn btn-outline-secondary m-4">Select food</a>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        }
+    </ol>
+</div>
+
+<hr />
+
+<partial name="_FoodsPagingPartial" model="@Model" />

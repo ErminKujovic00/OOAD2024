@@ -1,0 +1,369 @@
+﻿@using MyFitnessApp.Common
+@using MyFitnessApp.Services.Data.Profile
+@using MyFitnessApp.Services.Data.User
+@inject IProfilesService profilesService;
+@inject IUsersService usersService;
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@this.ViewData["Title"] - @GlobalConstants.SystemName</title>
+    <link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" asp-append-version="true" />
+    <link href="~/css/style.css" rel="stylesheet" asp-append-version="true" />
+    <link href="~/lib/fontawesome/css/all.css" rel="stylesheet" asp-append-version="true" />
+    <link href="~/lib/datatables/media/css/jquery.dataTables.min.css" asp-append-version="true" rel="stylesheet" />
+    <link href="~/css/site.min.css" rel="stylesheet" asp-append-version="true" />
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom box-shadow mb-3">
+            <div class="container">
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">
+                    <img class="img-responsive" style="width: 200px;" src="~/images/logo/logo01.jpg" alt="logo">
+                </a>
+
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-lg-inline-flex flex-lg-row-reverse">
+                    <partial name="_LoginPartial" />
+                    <div class="navbar-nav flex-grow-1">
+
+                        <div class="dropdown">
+                            <button class="btn btn" type="button" id="" aria-haspopup="true" aria-expanded="false">
+                                Home
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <a class="dropdown-item" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy policy</a>
+                                <a class="dropdown-item" asp-area="" asp-controller="Home" asp-action="Terms">Terms and conditions</a>
+                                <a class="dropdown-item" asp-area="" asp-controller="Home" asp-action="CommunityGuidelines">Community guidelines</a>
+                            </div>
+                        </div>
+
+                        @if (this.User.Identity.IsAuthenticated)
+                        {
+                            var userId = User.GetId();
+                            @if (this.usersService.IsUserBanned(userId) == false)
+                            {
+                                var doesUserHaveProfile = profilesService.DoesUserHaveProfile(userId);
+                                <div class="dropdown">
+                                    <button class="btn btn" type="button" id="" aria-haspopup="true" aria-expanded="false">
+                                        Profile
+                                    </button>
+                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                        @if (doesUserHaveProfile == false)
+                                        {
+                                            <a class="dropdown-item" asp-area="" asp-controller="Profiles" asp-action="CreateProfile">Create Profile</a>
+                                        }
+                                        @if (doesUserHaveProfile == true)
+                                        {
+                                            <a class="dropdown-item" asp-area="" asp-controller="Profiles" asp-action="MyProfile">My Profile</a>
+                                            <!--<a class="dropdown-item" asp-area="" asp-controller="Users" asp-action="Followees">Following</a>
+                                            <a class="dropdown-item" asp-area="" asp-controller="Users" asp-action="Followers">Followers</a>-->
+                                        }
+                                    </div>
+                                </div>
+
+                                @if (doesUserHaveProfile == true)
+                                {
+                                    <div class="dropdown">
+                                        <button class="btn btn" type="button" id="" aria-haspopup="true" aria-expanded="false">
+                                            Workout
+                                        </button>
+                                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                            <a class="dropdown-item" asp-area="" asp-controller="Exercises" asp-action="All">All exercises</a>
+                                            <a class="dropdown-item" asp-area="" asp-controller="Search" asp-action="SearchExercise">Search for an exercise</a>
+                                            <a class="dropdown-item" asp-area="" asp-controller="Exercises" asp-action="Create">Create new exercise</a>
+                                            <a class="dropdown-item" asp-area="" asp-controller="Exercises" asp-action="Categories">Exercises by muscle group</a>
+                                            <a class="dropdown-item" asp-area="" asp-controller="ExerciseDiary" asp-action="Monday">My exercise diary</a>
+                                        </div>
+                                    </div>
+
+                                    <div class="dropdown">
+                                        <button class="btn btn" type="button" id="" aria-haspopup="true" aria-expanded="false">
+                                            Nutrition
+                                        </button>
+                                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                            <a class="dropdown-item" asp-area="" asp-controller="Foods" asp-action="All">All foods</a>
+                                            <a class="dropdown-item" asp-area="" asp-controller="Search" asp-action="SearchFood">Search for a food</a>
+                                            <a class="dropdown-item" asp-area="" asp-controller="Foods" asp-action="Create">Create new food</a>
+                                            <a class="dropdown-item" asp-area="" asp-controller="Foods" asp-action="FoodDiary">My food diary</a>
+                                        </div>
+                                    </div>
+                                    <!--
+                                    <div class="dropdown">
+                                        <button class="btn btn" type="button" id="" aria-haspopup="true" aria-expanded="false">
+                                            Community
+                                        </button>
+                                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                            <a class="dropdown-item" asp-area="" asp-controller="Forums" asp-action="Categories">Forum</a>
+                                            <a class="dropdown-item" asp-area="" asp-controller="Users" asp-action="All">All users</a>
+                                            <a class="dropdown-item" asp-area="" asp-controller="Search" asp-action="SearchUser">Search for a user</a>
+                                            <a class="dropdown-item" asp-area="" asp-controller="Communities" asp-action="SendEmail">Invite friends</a>
+                                        </div>
+                                    </div>
+
+                                    <div class="dropdown">
+                                        <button class="btn btn" type="button" id="" aria-haspopup="true" aria-expanded="false">
+                                            Blog
+                                        </button>
+                                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                            <a class="dropdown-item" asp-area="" asp-controller="Articles" asp-action="All">All articles</a>
+                                            <a class="dropdown-item" asp-area="" asp-controller="Search" asp-action="SearchArticle">Search for an article</a>
+                                            <a class="dropdown-item" asp-area="" asp-controller="Articles" asp-action="Categories">Article categories</a>
+                                            <a class="dropdown-item" asp-area="" asp-controller="Articles" asp-action="Create">Create new article</a>
+                                        </div>
+                                    </div>
+                                    -->
+                                }
+                            }
+                        }
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <asp:Literal ID="lblRandomSentence" runat="server" Text='<%= RandomSentence %>' style="display:none;"></asp:Literal>
+
+
+    <div class="container">
+        <partial name="_CookieConsentPartial" /> 
+        <main role="main" class="pb-3">
+            @this.RenderBody()
+        </main>
+        <div id="notification" class="notification-class"></div>
+
+    </div>
+
+ 
+    <!-- Footer -->
+<footer class="page-footer font-small mdb-color pt-4" style="background-color: #e8ecef">
+
+    <!-- Footer Links -->
+    <div class="container text-center text-md-left">
+
+        <!-- Footer links -->
+        <div class="row text-center text-md-center mt-3 pb-3">
+
+            <!-- Grid column -->
+            <div class="col-lg-3 col-xl-3 mx-auto mt-3">
+                <h6 class="text-uppercase mb-4 font-weight-bold">
+                    <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">
+                        <img class="img-responsive" style="width: 200px;" src="~/images/logo/logo05.jpg" alt="logo">
+                    </a>
+                </h6>
+                <p>
+                    Losing weight isn't easy - we know. But with MyFitnessApp, you'll get the tools you need to successfully take weight off - and keep it off.
+                </p>
+            </div>
+            <!-- Grid column -->
+
+            <hr class="w-100 clearfix d-md-none">
+
+            <!-- Grid column -->
+            <!--<div class="col-lg-2 col-xl-2 mx-auto mt-3">
+                <h6 class="text-uppercase mb-4 font-weight-bold">Special thanks to</h6>
+                <p>
+                    <a href="https://www.myfitnesspal.com/" target="_blank">myfitnesspal.com</a>
+                </p>
+                <p>
+                    <a href="https://www.muscleandstrength.com/" target="_blank">muscleandstrength.com</a>
+                </p>
+                <p>
+                    <a href="https://www.bodybuilding.com/" target="_blank">bodybuilding.com</a>
+                </p>
+                <p>
+                    <a href="https://nikolay.it/">Nikolay Kostov</a>
+                </p>
+            </div>-->
+            <!-- Grid column -->
+            <!--
+            <hr class="w-100 clearfix d-md-none">
+            --->
+            <!-- Grid column -->
+            <!--
+            <div class="col-lg-2 col-xl-2 mx-auto mt-3">
+                <h6 class="text-uppercase mb-4 font-weight-bold">Useful links</h6>
+                <p>
+                    <a href="https://github.com/GeorgiGradev/MyFitnessApp" target="_blank">Open Source System</a>
+                </p>
+                <p>
+                    <a href="https://www.youtube.com/static?gl=GB&template=terms" target="_blank">YouTube Terms of Service</a>
+                </p>
+                <p>
+                    <a href="https://policies.google.com/privacy?hl=en-US" target="_blank">Google Privacy Policy</a>
+                </p>
+            </div>
+                -->
+            <!-- Grid column -->
+            <!--
+            <hr class="w-100 clearfix d-md-none">
+            -->
+            <!-- Grid column -->
+            <div class="col-lg-3 col-xl-3 mx-auto mt-3">
+                <h6 class="text-uppercase mb-4 font-weight-bold">Contact</h6>
+                <p>
+                    <i class="fas fa-home mr-3"></i> Sarajevo, Bosnia and Hercegovina
+                </p>
+                <p>
+                    <i class="fas fa-envelope mr-3"></i> info@myfitnessETF-app.com
+                </p>
+                <p>
+                    <i class="fas fa-phone mr-3"></i> + 000 000 000 000
+                </p>
+                <p>
+                    <i class="fas fa-print mr-3"></i> + 000 000 000 000
+                </p>
+            </div>
+            <!-- Grid column -->
+
+        </div>
+        <!-- Footer links -->
+        <!-- Grid row -->
+        <div class="row d-flex align-items-center">
+
+            <!-- Grid column -->
+            <div class="col-md-7 col-lg-8">
+
+                <!--Copyright-->
+                <p class="text-center text-md-left">
+                    &copy;  @DateTime.Now.Year -  @GlobalConstants.SystemName
+                </p>
+
+            </div>
+            <!-- Grid column -->
+            <!-- Grid column -->
+            <div class="col-md-5 col-lg-4 ml-lg-0">
+
+                <!-- Social buttons -->
+                <div class="text-center text-md-right">
+                    <ul class="list-unstyled list-inline">
+                        <li class="list-inline-item">
+                            <a class="btn-floating btn-sm rgba-white-slight mx-1">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a class="btn-floating btn-sm rgba-white-slight mx-1">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a class="btn-floating btn-sm rgba-white-slight mx-1">
+                                <i class="fab fa-google-plus-g"></i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a class="btn-floating btn-sm rgba-white-slight mx-1">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+            <!-- Grid column -->
+
+        </div>
+        <!-- Grid row -->
+
+    </div>
+    <!-- Footer Links -->
+
+</footer>
+    <!-- Footer -->
+
+
+    <script src="~/lib/jquery/dist/jquery.min.js" asp-append-version="true"></script>
+    <script src="~/lib/jquery-validation/dist/jquery.validate.min.js" asp-append-version="true"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/dist/jquery.validate.unobtrusive.min.js" asp-append-version="true"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.min.js" asp-append-version="true"></script>
+    <script src="~/js/site.min.js" asp-append-version="true"></script>
+    <script>
+        const sentences = [
+            "Every rep gets you closer to your goals.",
+            "Your body can stand almost anything; it's your mind you have to convince.",
+            "Sweat is just fat crying.",
+            "The pain you feel today will be the strength you feel tomorrow.",
+            "Push yourself because no one else is going to do it for you.",
+            "The only bad workout is the one that didn’t happen.",
+            "Strive for progress, not perfection.",
+            "Believe in yourself and all that you are.",
+            "Your only limit is you.",
+            "Success starts with self-discipline.",
+            "Great things never come from comfort zones.",
+            "You don’t have to be extreme, just consistent.",
+            "It’s not about having time; it’s about making time.",
+            "Small daily improvements are the key to staggering long-term results.",
+            "Do something today that your future self will thank you for.",
+            "The body achieves what the mind believes.",
+            "No matter how slow you go, you are still lapping everybody on the couch.",
+            "Train insane or remain the same.",
+            "Fitness is not about being better than someone else. It’s about being better than you used to be.",
+            "Don’t stop until you’re proud.",
+            "Wake up with determination; go to bed with satisfaction.",
+            "What seems impossible today will one day become your warm-up.",
+            "A one-hour workout is 4% of your day. No excuses.",
+            "You are stronger than you think.",
+            "Sweat now, shine later.",
+            "You don’t get what you wish for; you get what you work for.",
+            "When you feel like quitting, think about why you started.",
+            "Hard work beats talent when talent doesn’t work hard.",
+            "The pain you feel today will be the strength you feel tomorrow.",
+            "You are one workout away from a good mood.",
+            "Fitness is like a relationship; you can’t cheat and expect it to work.",
+            "Focus on progress, not perfection.",
+            "The harder you work for something, the greater you’ll feel when you achieve it.",
+            "Fitness is not about being better than someone else; it’s about being better than you used to be.",
+            "Don’t limit your challenges; challenge your limits.",
+            "Make your body the sexiest outfit you own.",
+            "Push harder than yesterday if you want a different tomorrow.",
+            "Strength doesn’t come from what you can do. It comes from overcoming the things you once thought you couldn’t.",
+            "You didn’t come this far to only come this far.",
+            "Sweat is magic. Cover yourself in it daily to grant your wishes.",
+            "Your body hears everything your mind says. Stay positive.",
+            "The difference between try and triumph is just a little umph!",
+            "Discipline is choosing between what you want now and what you want most.",
+            "Motivation gets you started; habit keeps you going.",
+            "Fitness is not a destination; it is a way of life.",
+            "A champion is someone who gets up when they can’t.",
+            "Your mind is a powerful thing. When you fill it with positive thoughts, your life will start to change.",
+            "The pain you feel today will be the strength you feel tomorrow.",
+            "It always seems impossible until it’s done.",
+            "Exercise not only changes your body, it changes your mind, your attitude, and your mood."
+        ];
+
+        
+        window.onload = function () {
+            // Select a random sentence
+            const randomSentence = sentences[Math.floor(Math.random() * sentences.length)];
+
+            // Get the notification element
+            const notification = document.getElementById('notification');
+
+            // Set the sentence and display the notification
+            notification.innerText = randomSentence;
+            if (window.location.pathname === '/') {
+                notification.style.display = 'block';
+            }
+
+            // Adjust the width based on the sentence length
+            const length = randomSentence.length;
+            const width = Math.min(length * 10, window.innerWidth * 0.8); // Calculate width and limit to 80% of window width
+            notification.style.width = width + 'px';
+
+            // Hide the notification after 5 seconds
+            setTimeout(function () {
+                notification.style.display = 'none';
+            }, 5000);
+        };
+
+    </script>
+    @await this.RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
